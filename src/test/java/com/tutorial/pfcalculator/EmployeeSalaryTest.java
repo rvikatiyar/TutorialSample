@@ -1,7 +1,7 @@
 package com.tutorial.pfcalculator;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -94,7 +94,6 @@ public class EmployeeSalaryTest {
 	 * 
 	 * */
 	@Test
-	
 	public void calculatePF(){
 		double pf = salaryService.getPF(salaryObj7); 
 		assertEquals(1200, pf, 0.001);
@@ -104,6 +103,12 @@ public class EmployeeSalaryTest {
 	public void calculatePF_exception(){
 		
 		double pf1 = salaryService.getPF(null); 
+	}
+	
+	@Test
+	public void calculatePF1(){
+		double pf = salaryService.getPF(salaryObj7); 
+		assertNotEquals(1500, pf, 0.001);
 	}
 	
 }
