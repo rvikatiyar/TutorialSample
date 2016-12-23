@@ -108,7 +108,7 @@ public class EmployeeSalaryTest {
 	@Test
 	public void calculatePF1(){
 		double pf = salaryService.getPF(salaryObj7); 
-		assertNotEquals(1500, pf, 0.001);
+		assertNotEquals(1200, pf, 0.001);
 	}
 	
 }
